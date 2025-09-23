@@ -1,53 +1,22 @@
-# Learning Devops
-this is a sample readme file
 
-## This is a sub heading
-### this is inside of sub heading
+# Hello Visitors 
 
-this is a simple paragraph 
+## Welcome to my Github Profile 
 
-this mark the begining of the new paa.  
+![](https://img.shields.io/badge/project-2-blue)  ![](https://img.shields.io/badge/Repository-5-yellow)  ![](https://img.shields.io/badge/participation-Smart--blue)  ![](https://img.shields.io/badge/1hackton-blue)
 
-## Order list
-1.step1
+### My Current Skill-
 
-2.step2
-
-3.step3
-
-## Unorderd list
-
-- ice  
-
-- sugar    
-
-- tea  
-
->This is my Quote
-
-The world `WHO` stands ~~for~~ World Health Organisation.
-
-```
-this is first line  
-this  second  line  
-this is third line  
-```
-
-
-This  line content **Bold**,*Italic* ang ***Bold Italic***. 
-
-![Image not found](rajib.jpg)
-
-https://www.google.com
-
-[Google](https://www.google.com)
-
-|col-1|col-2|  
-|---|---|
-|Name|Text|
+![](https://img.shields.io/badge/Programminglanguage=>-blue)  
+![](https://img.shields.io/badge/HTML-red)
+![](https://img.shields.io/badge/CSS-blue)
+![](https://img.shields.io/badge/Javascript-yellow) 
+![](https://img.shields.io/badge/C/C++-blue) 
+![](https://img.shields.io/badge/Python-green) 
 
 
 
-# Github README.md file editing web-
+>Paricipation in Smart India Hackton(SIH) 
 
-[Github README.md](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+`My  current Development skill (Web devlopment) or (Full-stack development.)`
+

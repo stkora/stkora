@@ -1,0 +1,300 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Santhal Cultural Hub</title>
+  <meta name="description" content="A community portal for the Santhal people — culture, literature, services, products, events and multimedia.">  <!-- Google font (optional) -->  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">  <style>
+    :root{
+      --bg:#FBFBFB;
+      --card:#FFFFFF;
+      --accent:#2E8B57; /* greenish accent inspired by nature */
+      --muted:#6B7280;
+      --max-width:1100px;
+      --radius:12px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: 'Noto Sans', system-ui, -apple-system, Arial;
+      background: linear-gradient(180deg,#f3fff8 0%, var(--bg) 100%);
+      color:#0b1220; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Container */
+    .wrap{max-width:var(--max-width); margin:28px auto; padding:0 18px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#176a4b);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px
+    }
+    .site-title{font-weight:700;font-size:18px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
+    nav a:hover{color:var(--accent);background:rgba(46,139,87,0.06)}
+
+    /* Mobile nav toggle */
+    .nav-toggle{display:none;background:none;border:0;font-size:22px}
+
+    /* Hero */
+    .hero{
+      margin-top:18px;background:linear-gradient(180deg, rgba(46,139,87,0.06), transparent);
+      padding:24px;border-radius:var(--radius);display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center
+    }
+    .hero h1{margin:0;font-size:28px}
+    .hero p{color:var(--muted);margin-top:8px}
+    .cta-row{margin-top:16px;display:flex;gap:10px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(11,18,32,0.06);color:var(--accent)}
+
+    /* Quick links cards on right */
+    .quick-cards{display:flex;flex-direction:column;gap:12px}
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .card h3{margin:0;font-size:14px}
+    .card p{margin:8px 0 0;color:var(--muted);font-size:13px}
+
+    /* Sections */
+    section{margin-top:20px}
+    .grid{display:grid;gap:16px}
+
+    /* Highlights row */
+    .highlights{grid-template-columns:repeat(3,1fr)}
+    .highlight{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fcfffb);box-shadow:0 8px 20px rgba(16,24,40,0.05)}
+    .highlight h4{margin:0}
+    .highlight p{color:var(--muted);margin-top:8px;font-size:14px}
+
+    /* Products / Marketplace */
+    .products{grid-template-columns:repeat(3,1fr)}
+    .product{display:flex;flex-direction:column;gap:8px}
+    .product img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .product .meta{display:flex;justify-content:space-between;align-items:center}
+    .price{font-weight:700;color:var(--accent)}
+
+    /* Literature list */
+    .literature{grid-template-columns:1fr 1fr}
+    .book{display:flex;gap:12px;align-items:center}
+    .book img{width:72px;height:92px;object-fit:cover;border-radius:6px}
+
+    /* Events */
+    .events{grid-template-columns:1fr}
+    .event{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfffb)}
+
+    /* Community */
+    .community{display:flex;gap:12px;flex-wrap:wrap}
+    .member{padding:10px;border-radius:10px;background:var(--card);min-width:160px}
+
+    footer{margin-top:36px;padding:20px 0;color:var(--muted);font-size:14px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .highlights{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      header{flex-direction:column;align-items:flex-start}
+      nav{display:none}
+      .nav-toggle{display:block}
+      .wrap{padding:0 14px}
+      .products{grid-template-columns:1fr}
+      .literature{grid-template-columns:1fr}
+    }
+  </style></head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>Sa</div>
+        <div>
+          <div class="site-title">Santhal Cultural Hub</div>
+          <div style="font-size:12px;color:var(--muted)">Language • Culture • Marketplace</div>
+        </div>
+      </div><nav aria-label="Main navigation">
+    <a href="#culture">Culture</a>
+    <a href="#literature">Literature</a>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#community">Community</a>
+  </nav>
+
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleNav(this)">☰</button>
+</header>
+
+<!-- HERO -->
+<main class="hero" role="main">
+  <div>
+    <h1>Preserve, Discover and Share Santhal Heritage</h1>
+    <p>Everything from folk songs, oral literature, artisans' products, local services and events — curated by and for the Santhal community.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#literature">Explore Literature</a>
+      <a class="btn btn-ghost" href="#products">Shop Local</a>
+    </div>
+
+    <!-- Highlights -->
+    <section class="grid highlights" aria-label="Highlights" style="margin-top:18px">
+      <article class="highlight">
+        <h4>Folk Songs & Chants</h4>
+        <p>Audio archives with transcriptions in Santali and English to help study and teach younger generations.</p>
+      </article>
+      <article class="highlight">
+        <h4>Traditional Crafts</h4>
+        <p>Handmade textiles, beadwork and tools — discover makers and order directly from artisans.</p>
+      </article>
+      <article class="highlight">
+        <h4>Community Services</h4>
+        <p>Find local services: education, healthcare guides, cultural events, and legal/land assistance.</p>
+      </article>
+    </section>
+  </div>
+
+  <aside class="quick-cards">
+    <div class="card" aria-labelledby="q1">
+      <h3 id="q1">Latest Events</h3>
+      <p>Seasonal festivals, dance gatherings and cultural workshops — see upcoming dates and contact organisers.</p>
+    </div>
+    <div class="card" aria-labelledby="q2">
+      <h3 id="q2">Spotlight Artisan</h3>
+      <p>Each week we feature a Santhal maker — read their story and support their craft.</p>
+    </div>
+    <div class="card" aria-labelledby="q3">
+      <h3 id="q3">Language Corner</h3>
+      <p>Basic Santali lessons, alphabets, and downloadable PDFs for teachers and learners.</p>
+    </div>
+  </aside>
+</main>
+
+<!-- LITERATURE -->
+<section id="literature">
+  <h2>Literature & Oral Traditions</h2>
+  <p style="color:var(--muted);margin-top:6px">Collections of stories, poems, and transcribed oral histories.</p>
+
+  <div class="grid literature" style="margin-top:12px">
+    <article class="card book">
+      <img src="https://via.placeholder.com/72x92.png?text=Book" alt="book cover">
+      <div>
+        <strong>Folk Tales of the Santhal</strong>
+        <p style="margin:6px 0;color:var(--muted)">Compiled oral stories with translations and notes for teachers.</p>
+        <div style="font-size:13px;color:var(--muted)">Download • Cite • Teach</div>
+      </div>
+    </article>
+
+    <article class="card book">
+      <img src="https://via.placeholder.com/72x92.png?text=Poems" alt="book cover">
+      <div>
+        <strong>Poetry & Chants Collection</strong>
+        <p style="margin:6px 0;color:var(--muted)">Recordings alongside phonetic scripts for learners.</p>
+        <div style="font-size:13px;color:var(--muted)">Audio • Transcript • Notes</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Local Services</h2>
+  <p style="color:var(--muted);margin-top:6px">Healthcare, legal aid, education support and skill-building workshops.</p>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:12px">
+    <div class="card">
+      <h4>Education & Tutoring</h4>
+      <p class="muted">Contact local tutors who teach Santali and regional curricula.</p>
+    </div>
+    <div class="card">
+      <h4>Healthcare Guides</h4>
+      <p class="muted">Trusted clinics and health workers with Santali-language support.</p>
+    </div>
+    <div class="card">
+      <h4>Legal & Land Help</h4>
+      <p class="muted">Resources for land rights, documentation and legal referrals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Marketplace — Handmade & Local Products</h2>
+  <p style="color:var(--muted);margin-top:6px">Support artisans by buying authentic Santhal crafts.</p>
+
+  <div class="grid products" style="margin-top:12px">
+    <article class="card product">
+      <img src="https://via.placeholder.com/400x240.png?text=Textile" alt="textile product">
+      <div>
+        <div class="meta"><strong>Handwoven Blanket</strong><span class="price">₹850</span></div>
+        <p style="margin:6px 0;color:var(--muted)">Wool blanket woven by Janaki from Jharkhand. Available to ship.</p>
+      </div>
+    </article>
+    <article class="card product">
+      <img src="https://via.placeholder.com/400x240.png?text=Beadwork" alt="beadwork">
+      <div>
+        <div class="meta"><strong>Bead Necklace</strong><span class="price">₹250</span></div>
+        <p style="margin:6px 0;color:var(--muted)">Traditional beadwork pattern; made-to-order sizes.</p>
+      </div>
+    </article>
+    <article class="card product">
+      <img src="https://via.placeholder.com/400x240.png?text=Tool" alt="tool">
+      <div>
+        <div class="meta"><strong>Handcrafted Tool</strong><span class="price">Contact</span></div>
+        <p style="margin:6px 0;color:var(--muted)">Locally used farming and household tools — durable and traditional.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <h2>Events & Workshops</h2>
+  <div class="grid events" style="margin-top:12px">
+    <div class="event card">
+      <div>
+        <strong>Harvest Festival Workshop</strong>
+        <div style="color:var(--muted);font-size:13px">Oct 15, 2025 — Dance, music and craft stalls. Registration open.</div>
+      </div>
+      <div><a class="btn btn-ghost" href="#">Register</a></div>
+    </div>
+    <div class="event card">
+      <div>
+        <strong>Oral History Recording Drive</strong>
+        <div style="color:var(--muted);font-size:13px">Nov 02, 2025 — Bring elders to record family stories.</div>
+      </div>
+      <div><a class="btn btn-ghost" href="#">Volunteer</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <h2>Community & Connect</h2>
+  <p style="color:var(--muted);margin-top:6px">Forums, local groups, and mentorship opportunities.</p>
+  <div class="community" style="margin-top:12px">
+    <div class="member card">Discussion Forum</div>
+    <div class="member card">Find a Mentor</div>
+    <div class="member card">Local Groups</div>
+    <div class="member card">Submit a Story</div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Santhal Cultural Hub — Built with community
+</footer>
+
+  </div>  <script>
+    // small helpers: mobile nav & year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleNav(btn){
+      const nav = document.querySelector('nav');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if(nav.style.display === 'block') nav.style.display = '';
+      else nav.style.display = 'block';
+    }
+  </script></body>
+</html>

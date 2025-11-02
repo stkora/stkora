@@ -21,5 +21,5 @@
 
 >Paricipation in Smart India Hackton(SIH) 
 
-`My  current Development skill (Web devlopment) or (Full-stack development.)`
+`My  current Development skill (Web development) or (Full-stack development.)`
 
